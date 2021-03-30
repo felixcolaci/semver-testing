@@ -2,3 +2,4 @@
 
 fix
 feature foo
+fix some
