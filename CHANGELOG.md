@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/felixcolaci/semver-testing/compare/v1.1.0...v1.1.1) (2021-04-12)
+
+
+### Bug Fixes
+
+* something else ([85054c5](https://www.github.com/felixcolaci/semver-testing/commit/85054c59e4b0fc5642a9cc3cac18efbd5cabbe66))
+
 ## [1.1.0](https://www.github.com/felixcolaci/semver-testing/compare/v1.0.1...v1.1.0) (2021-03-30)
 
 
