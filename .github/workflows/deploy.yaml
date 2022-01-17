@@ -1,0 +1,33 @@
+name: deploy-continously
+
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "Stage (dev|ci|git|prod)"
+        required: true
+        default: "ci"
+      release:
+        description: "Release version"
+        required: true
+        default: "latest"
+      config_reference:
+        description: "Referenced Stage (dev|ci|git|prod)"
+        required: true
+        default: "git"
+  release:
+    types: [published]
+jobs:
+  Demo:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tenant:
+          - md
+          - km
+    steps:
+      - name: "foo"
+        run: |
+          echo "Tenant: ${{ matrix.tenant }}"
+          echo "Stage: ${{ github.event.inputs.stage || 'ci' }}"
+          echo "Release: ${{ github.event.inputs.release }}"
