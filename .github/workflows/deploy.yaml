@@ -32,4 +32,4 @@ jobs:
         run: |
           echo "Tenant: ${{ matrix.tenant }}"
           echo "Stage: ${{ github.event.inputs.stage || 'ci' }}"
-          echo "Release: ${{ github.event.inputs.release }}"
+          echo "Release: ${{ github.event.inputs.release || github.event.release.tag_name }}"
