@@ -26,6 +26,8 @@ jobs:
           - md
           - km
     steps:
+      - name: "github event"
+        run: echo "${{ toJSON(github.event) }}"
       - name: "foo"
         run: |
           echo "Tenant: ${{ matrix.tenant }}"
